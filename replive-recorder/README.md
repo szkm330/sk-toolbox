@@ -10,7 +10,8 @@ Replive直播录制工具
 
 - Python
   - `pip install requests`
-
+  - `pip install rich`
+  
 - FFmpeg
 
 - [Charles](https://www.charlesproxy.com/download/)
@@ -29,12 +30,11 @@ Replive直播录制工具
   - 设置Port为8888，并勾选下方的`Support  HTTP/2` 和`Enable transparent HTTP proxying`
 - 修改SSL代理（`Proxy -> SSL Proxying Settings`）
   - 勾选`Enable SSL Proxying`
-  - 在Include侧添加：Host为`api.replive.com`，Port为443
+  - 在Include侧添加：Host为`*`，Port为443
 - 安装证书（`Help -> SSL Proxying -> Install Charles Root Certificate`）
   - 自定义证书存储位置，选择`受信任的根证书颁发机构`
   - 安装完成后，重启Charles
-- 记录PC的IP地址
-  - 终端输入`ipconfig`，找到IPv4地址
+- 记录PC的IP地址（`Help > Local IP Addresses`）
 
 ##### 手机端（iPhone）
 
@@ -71,6 +71,7 @@ Replive直播录制工具
 # ==================== CONFIG ====================
 REFRESH_TOKEN = "" // 抓取的refresh token
 FFMPEG_PATH = "ffmpeg.exe" // 如果不在同一文件夹，修改为实际路径
+CHECK_INTERVAL = 20  # 检查间隔（秒）
 # ==============================================
 ```
 
@@ -83,18 +84,15 @@ python replive_recorder.py
 - 运行结果示例
 
 ```
-Token 刷新成功
-过期时间: 2024-11-06 20:30:00
+正在验证 Token
+Token 验证成功
+初始化完成，开始监控直播
 
-初始化成功，开始监控直播...
+╭───────────────── Replive 直播录制 ──────────────────╮
+│ 监控状态: 运行中 | 时间: 21:01:05                   │
+╰─────────────────────────────────────────────────────╯
 
-==================================================
-主播A 开始直播
-标题: 直播标题
-录制到: 主播A_20241106_123456.mp4
-==================================================
-录制开始，进程 ID: 123456
-
+正在录制的直播:
 ...
 ```
 
