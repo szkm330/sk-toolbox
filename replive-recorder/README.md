@@ -8,12 +8,8 @@ Replive直播录制工具
 
 ## 依赖
 
-- Python
-  - `pip install requests`
-  - `pip install rich`
-  
+- uv
 - FFmpeg
-
 - [Charles](https://www.charlesproxy.com/download/)
 
   
@@ -78,7 +74,7 @@ CHECK_INTERVAL = 20  # 检查间隔（秒）
 - 运行
 
 ```
-python replive_recorder.py
+uv run replive_recorder.py
 ```
 
 - 运行结果示例

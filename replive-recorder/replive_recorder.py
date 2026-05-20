@@ -1,5 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# /// script
+# dependencies = [
+#     "requests",
+#     "rich",
+# ]
+# ///
 
 import json
 import subprocess

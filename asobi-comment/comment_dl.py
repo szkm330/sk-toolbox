@@ -1,3 +1,10 @@
+# /// script
+# dependencies = [
+#     "msgpack",
+#     "websockets",
+# ]
+# ///
+
 import asyncio
 import websockets
 import json

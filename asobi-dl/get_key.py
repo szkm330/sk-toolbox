@@ -1,3 +1,10 @@
+# /// script
+# dependencies = [
+#     "pywidevine",
+#     "requests",
+# ]
+# ///
+
 import requests
 from pywidevine.cdm import Cdm
 from pywidevine.device import Device

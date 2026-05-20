@@ -1,9 +1,6 @@
 ## requirements
 
-- pip install
-    - requests
-    - pywidevine
-
+- uv
 - ffmpeg
 - [N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE)
 - [mp4decrypt](https://www.bento4.com/downloads/)
@@ -18,7 +15,7 @@ N_m3u8DL-RE "mpd-url" --header "User-Agent: xxx" --header "Referer: xxx" --save-
 
 ### 获取密钥
 ```
-python get_key.py
+uv run get_key.py
 ```
 
 ### 解密
