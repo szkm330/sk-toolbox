@@ -14,6 +14,7 @@ from pywidevine.pssh import PSSH
 WVD_PATH = ".wvd"
 
 # mpd response <cenc:pssh>
+# 搜索widevine的uuid: edef8ba9-79d6-4ace-a3c8-27dcd51d21ed
 PSSH_STRING = ""
 
 # license
