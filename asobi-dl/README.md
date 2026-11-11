@@ -29,4 +29,5 @@ mp4decrypt --key xxx manifest.und.m4a audio_dec.m4a
 ### 合并
 ```
 ffmpeg -i video_dec.mp4 -i audio_dec.m4a -c copy output.mp4
+ffmpeg -i video_dec.mp4 -i audio_dec.m4a -c:v libx264 -crf 18 -preset slow -c:a copy output.mp4
 ```
